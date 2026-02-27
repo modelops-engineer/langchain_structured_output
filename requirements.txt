@@ -1,0 +1,34 @@
+# py-torch
+torch
+
+# Langchain core Model
+langchain
+langchain-core
+
+# Open AI Integration
+langchain-openai
+openai
+
+
+# Anthropic Integration
+langchain-anthropic
+
+
+# Google Gemini Integration
+langchain-google-genai
+google-generativeai
+
+# Hugging Face integration
+langchain-huggingface
+transformers
+huggingface-hub
+
+
+# Environment variables
+python-dotenv
+
+# ML utilities
+scikit-learn
+numpy
+pandas
+typing
