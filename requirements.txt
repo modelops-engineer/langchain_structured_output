@@ -31,4 +31,7 @@ python-dotenv
 scikit-learn
 numpy
 pandas
+
+# Utils
 typing
+pydantic
