@@ -1,6 +1,6 @@
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
-from typing import TypedDict
+from typing import TypedDict, Annotated, Optional, Literal
 
 
 load_dotenv()
@@ -9,9 +9,11 @@ model = ChatOpenAI()
 
 # Schema
 class Review(TypedDict):
-    summary : str
-    sentiment : str
 
+    characters : Annotated[list[str], "Give the names of characters discussed in the review"]
+    summary : Annotated[str,"A brif summary of the review"]
+    sentiment : Annotated[Literal["positive","neutral","negative"], "Return sentiment of the review"]
+    movie_title : Annotated[Optional[str], "Write the name of the movie/series if written in the review"]
 
 structured_model = model.with_structured_ouput(Review)
 
