@@ -16,7 +16,7 @@ class Review(BaseModel):
     sentiment : Literal["positive","neutral","negative"] = Field(description="Return sentiment of the review")
     movie_title : Optional[str] = Field(default = None, description = "Write the name of the movie/series if written in the review")
 
-structured_model = model.with_structured_ouput(Review)
+structured_model = model.with_structured_output(Review)
 
 result = structured_model.invoke("""
 I've watched up to episode four. The casting of Duncan and Egg is fantastic.

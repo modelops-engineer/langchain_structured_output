@@ -32,7 +32,7 @@ json_schema = {
   "required" : ["summary", "sentiment"]
 }
 
-structured_model = model.with_structured_ouput(json_schema)
+structured_model = model.with_structured_output(json_schema)
 
 result = structured_model.invoke("""
 I've watched up to episode four. The casting of Duncan and Egg is fantastic.

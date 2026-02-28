@@ -15,7 +15,7 @@ class Review(TypedDict):
     sentiment : Annotated[Literal["positive","neutral","negative"], "Return sentiment of the review"]
     movie_title : Annotated[Optional[str], "Write the name of the movie/series if written in the review"]
 
-structured_model = model.with_structured_ouput(Review)
+structured_model = model.with_structured_output(Review)
 
 result = structured_model.invoke("""
 I've watched up to episode four. The casting of Duncan and Egg is fantastic.
